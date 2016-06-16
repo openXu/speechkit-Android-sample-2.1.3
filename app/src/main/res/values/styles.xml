@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+    </style>
+
+
+    <!-- ActionBar styles -->
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/nuance_blue</item>
+    </style>
+
+
+    <style name="RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">100</item>
+        <item name="android:textColor">@drawable/segmented_button_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="RadioButtonLeft" parent="RadioButton">
+        <item name="android:background">@drawable/segmented_button_background_left</item>
+    </style>
+    <style name="RadioButtonMiddle" parent="RadioButton">
+        <item name="android:background">@drawable/segmented_button_background</item>
+    </style>
+    <style name="RadioButtonRight" parent="RadioButton">
+        <item name="android:background">@drawable/segmented_button_background_right</item>
+    </style>
+
+    <style name="ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/action_button_color</item>
+        <item name="android:background">@drawable/action_button_background</item>
+    </style>
+
+
+    <style name="Label">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

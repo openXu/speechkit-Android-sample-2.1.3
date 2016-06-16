@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="sample.nuance.com.speechkitsample.ASRActivity">
+
+    <TextView
+        android:id="@+id/reco_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/reco_type_label"
+        style="@style/Label"/>
+
+    <RadioGroup
+        android:id="@+id/reco_type_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reco_type_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/dictation"
+            android:text="@string/dictation"
+            android:checked="true"
+            style="@style/RadioButtonLeft"/>
+
+        <RadioButton
+            android:id="@+id/search"
+            android:text="@string/search"
+            style="@style/RadioButtonMiddle"/>
+
+        <RadioButton
+            android:id="@+id/tv"
+            android:text="@string/tv"
+            style="@style/RadioButtonRight"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/detection_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reco_type_picker"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/detection_type_label"
+        style="@style/Label"/>
+
+    <RadioGroup
+        android:id="@+id/detection_type_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detection_type_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/long_endpoint"
+            android:text="@string/long_endpointer"
+            style="@style/RadioButtonLeft"/>
+
+        <RadioButton
+            android:id="@+id/short_endpoint"
+            android:text="@string/short_endpointer"
+            android:checked="true"
+            style="@style/RadioButtonMiddle"/>
+
+        <RadioButton
+            android:id="@+id/none"
+            android:text="@string/none"
+            style="@style/RadioButtonRight"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/language_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detection_type_picker"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="@string/language_label"
+            style="@style/Label"/>
+
+        <EditText
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="@string/default_language"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/logs_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/language_container"
+        android:layout_above="@+id/toggle_reco"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logs_background">
+
+        <TextView
+            android:id="@+id/logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:background="@android:color/transparent"/>
+
+        </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/volume_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logs_container"
+        android:layout_marginTop="-6dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="0"
+        android:max="100"/>
+
+
+
+
+    <TextView
+        android:id="@+id/logs_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logs_container"
+        android:layout_alignLeft="@+id/logs_container"
+        android:layout_alignStart="@+id/logs_container"
+        android:layout_margin="15dp"
+        android:text="@string/logs_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#D1D1D1"/>
+
+    <Button
+        android:id="@+id/clear_logs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logs_container"
+        android:layout_alignRight="@+id/logs_container"
+        android:layout_alignEnd="@+id/logs_container"
+        android:layout_margin="5dp"
+        android:text="@string/clear_logs_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2E85FF"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/toggle_reco"
+        android:layout_above="@+id/footer"
+        android:text="@string/recognize"
+        style="@style/ActionButton"/>
+
+
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

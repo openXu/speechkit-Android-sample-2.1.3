@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="sample.nuance.com.speechkitsample.TTSActivity">
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/tts_text_label"
+        style="@style/Label"/>
+
+
+    <ScrollView
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/text_label"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/action_button_background">
+
+        <EditText
+            android:id="@+id/tts_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:background="@android:color/transparent"
+            android:text="@string/tts_text"
+            android:textColor="@color/nuance_baby_blue"
+            android:inputType="textMultiLine"
+            />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/language_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="@string/language_label"
+            style="@style/Label"/>
+
+        <EditText
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="@string/default_language"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/logs_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/language_container"
+        android:layout_above="@+id/toggle_tts"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logs_background">
+
+        <TextView
+            android:id="@+id/logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:background="@android:color/transparent"/>
+
+        </ScrollView>
+
+
+    <TextView
+        android:id="@+id/logs_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logs_container"
+        android:layout_alignLeft="@+id/logs_container"
+        android:layout_alignStart="@+id/logs_container"
+        android:layout_margin="15dp"
+        android:text="@string/logs_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#D1D1D1"/>
+
+    <Button
+        android:id="@+id/clear_logs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logs_container"
+        android:layout_alignRight="@+id/logs_container"
+        android:layout_alignEnd="@+id/logs_container"
+        android:layout_margin="5dp"
+        android:text="@string/clear_logs_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2E85FF"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/toggle_tts"
+        android:layout_above="@+id/footer"
+        android:text="@string/speak_string"
+        style="@style/ActionButton"/>
+
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

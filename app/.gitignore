@@ -1,0 +1,9 @@
+#Android Studio
+/build
+/libs
+/src/main/jniLibs
+
+#Eclipse
+/src/main/bin
+/src/main/gen
+/src/main/libs

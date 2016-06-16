@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SpeechKit Sample</string>
+    <string name="app_version">SpeechKit SampleApp v2.1.3</string>
+    <string name="sdk_version">SpeechKit SDK 2.1.3</string>
+
+    <string name="title_activity_asr">Speech Recognition</string>
+    <string name="title_activity_nlu">Speech and Natural Language</string>
+    <string name="title_activity_text_nlu">Text and Natural Language</string>
+    <string name="title_activity_tts">Speech Synthesis</string>
+
+    <string name="title_activity_audio">Audio Playback</string>
+
+    <string name="title_activity_config">Configuration</string>
+    <string name="title_activity_about">About</string>
+
+
+    <string name="reco_type_label">Recognition Type / Language Model</string>
+    <string name="dictation">Dictation</string>
+    <string name="search">Search</string>
+    <string name="tv">Television</string>
+
+    <string name="nlu_context_tag_label">NLU Context Tag</string>
+    <string name="detection_type_label">Detection Type</string>
+    <string name="long_endpointer">Long</string>
+    <string name="short_endpointer">Short</string>
+    <string name="none">None</string>
+
+    <string name="text_input_label">Text Input</string>
+    <string name="text_input_missing">Missing Text Input</string>
+    <string name="transaction_with_service">transactionWithService()</string>
+
+    <string name="tts_text_label">What would you like to have spoken?</string>
+    <string name="tts_text">This is a test of speech synthesis from Nuance Communications.</string>
+
+    <string name="repetitions_label">Repetitions</string>
+    <string name="default_repetitions">1</string>
+
+    <string name="language_label">Language Code</string>
+    <string name="default_language">eng-USA</string>
+
+    <string name="logs_label">logs</string>
+    <string name="clear_logs_label">clear</string>
+
+    <string name="speak_string">speakString()</string>
+    <string name="cancel">cancel</string>
+
+    <string name="recognize">recognize()</string>
+    <string name="recognize_with_service">recognizeWithService()</string>
+    <string name="playing">Playing..</string>
+    <string name="listening">Listening..</string>
+    <string name="processing">Processing..</string>
+
+    <string name="enqueue">enqueue()</string>
+
+    <string name="config_text">All fields can be modified in Configuration.java</string>
+
+    <string name="server_host">SERVER_HOST</string>
+    <string name="server_port">SERVER_PORT</string>
+    <string name="app_id">APP_ID</string>
+    <string name="app_key">APP_KEY</string>
+    <string name="nlu_context_tag">NLU_CONTEXT_TAG</string>
+
+    <string name="about_docs">Documentation, SDK Downloads, Account Settings, and more can be found at: &lt;a&gt;http://developer.nuance.com/&lt;/a&gt;</string>
+    <string name="about_questions">Have questions? Email us at: &lt;a&gt;developerrelations@nuance.com&lt;/a&gt;</string>
+    <string name="about_components">This application was tested with:&lt;br /&gt;</string>
+    <string name="bullet_point">\u2022 </string>
+
+</resources>
