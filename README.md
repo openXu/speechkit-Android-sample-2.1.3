@@ -35,7 +35,7 @@ Add the following to your settings.gradle file:
 
 
 ###①.注册
-进入开发者首页后点击右上角注册账号（注意密码设置至少8位，有大小写字母数字）：
+进入开发者首页后点击右上角注册账号（注意密码设置至少8位，有大小写字母数字）：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/1.png)
     
 注册完成之后登陆，需要你激活邮箱，按照步骤做就行。
@@ -43,45 +43,53 @@ Add the following to your settings.gradle file:
 
 
 ###②.预览
-激活登陆之后点击Docs&SDKs：
+激活登陆之后点击Docs&SDKs：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/2.png)
-先看看开发指栏（DEV GUIDES），选择对应平台，这里我们选Android的，现在版本为2.1.3.
+
+先看看开发指栏（DEV GUIDES），选择对应平台，这里我们选Android的，现在版本为2.1.3.</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/3.png)
-左边菜单栏有各种功能，我们现在选择自动语音识别ASR技术，右边就会有一些快速入门的示例。
+
+左边菜单栏有各种功能，我们现在选择自动语音识别ASR技术，右边就会有一些快速入门的示例。</br>
 
 ###③.下载sample app
-最简单粗暴的学习方法就是看Demo，Nuance提供了Sample app，直接下载：
+最简单粗暴的学习方法就是看Demo，Nuance提供了Sample app，直接下载：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/4.png)
-这是一个Stutio工程，直接打开，包结构：
+
+这是一个Stutio工程，直接打开，包结构：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/5.png)
 
-代码非常少而且简单易读，而我们用的ASR一眼就知道该看那个Activity。
+代码非常少而且简单易读，而我们用的ASR一眼就知道该看那个Activity。</br>
 
-运行之后点击第一条：Speech Recognition，然后程序就蹦了，原因是没有填写App Key 和App ID等配置信息
+运行之后点击第一条：Speech Recognition，然后程序就蹦了，原因是没有填写App Key 和App ID等配置信息</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/6.png)
 
 ###④.申请KEY ID
-点击My Account->左下方有一个Create New App，下面的步骤就略过了，填写信息一路Continue:
+点击My Account->左下方有一个Create New App，下面的步骤就略过了，填写信息一路Continue:</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/7.png)
-创建完毕之后，需要到My Account->点击刚刚创建的app：
+
+创建完毕之后，需要到My Account->点击刚刚创建的app：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/8.png)
-获取创建的app的keyid等信息：
+
+获取创建的app的keyid等信息：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/9.png)
-将对应的信息配置到Configuration中：
+
+将对应的信息配置到Configuration中：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/10.png)
 
-然后。。。就能正常使用了：
+然后。。。就能正常使用了：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/11.png)
 
 ###⑤.设置语言
 demo中Language Code那一栏填写的是你需要识别的语言代码，
-比如上面我说中文，要识别为汉字，我们就填写cmn-CHN，代表普通话简体。其他支持的语言可以参考文档：
+比如上面我说中文，要识别为汉字，我们就填写cmn-CHN，代表普通话简体。其他支持的语言可以参考文档：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/12.png)
-打开Language类：
+
+打开Language类：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/13.png)
+
 打开连接：https://developer.nuance.com/public/index.php?task=supportedLanguages
-所有支持的语言都列出来了：
+所有支持的语言都列出来了：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/14.png)
 
-看不懂，百度翻译一下就OK：
+看不懂，百度翻译一下就OK：</br>
 &emsp;&emsp;&emsp;&emsp;![](./mydir/15.png)
